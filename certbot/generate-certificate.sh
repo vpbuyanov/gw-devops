@@ -1,7 +1,7 @@
 rm -rf /etc/letsencrypt/live/gw*
 
 # выдаем себе сертификат (обратите внимание на переменные среды)
-certbot certonly --standalone -d $DOMAIN_URL --cert-name=certfolder --key-type rsa --agree-tos
+certbot certonly --standalone -d $DOMAIN_URL --cert-name=gw --key-type rsa --agree-tos
 
 # удаляем старые сертификаты из примонтированной
 # через Docker Compose папки Nginx
