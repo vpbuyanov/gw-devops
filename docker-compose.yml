@@ -52,7 +52,7 @@ services:
     container_name: gw-backend-go
     restart: unless-stopped
     ports:
-      - "127.0.0.1:8080:8080"
+      - "8080:8080"
     volumes:
       - server-data:/var/lib/server/data
     depends_on:
