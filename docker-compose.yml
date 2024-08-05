@@ -60,5 +60,10 @@ services:
     networks:
       gw:
 
+volumes:
+  redis-data:
+  server-data:
+  postgres-data:
+
 networks:
   gw:
