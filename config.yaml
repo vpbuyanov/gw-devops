@@ -1,0 +1,24 @@
+postgres:
+  host: postgres
+  port: 5432
+  user: postgres
+  password: postgres
+  dbname: gw
+
+redis:
+  host: redis
+  port: 6379
+  password:
+  DB: 0
+
+server:
+  port: 8080
+  host: 0.0.0.0
+
+JWT:
+  secret: ieHYGvz3MFTAponXDjhJsiPOJV0SxruO
+
+mailer:
+  name: SAPR ROAD
+  from_email_address: vpbuyanovv@gmail.com
+  from_email_password: umpuwkthejjgvssf
