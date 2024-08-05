@@ -3,6 +3,8 @@ services:
     image: nginx:latest
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./etc/letsencrypt/live/vpbuyanov.ru/fullchain.pem:/etc/cert.pem
+      - ./etc/letsencrypt/live/vpbuyanov.ru/privkey.pem:/etc/key.pem
     ports:
       - "80:80"
       - "443:443"
