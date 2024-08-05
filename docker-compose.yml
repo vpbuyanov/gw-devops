@@ -11,22 +11,6 @@ services:
     networks:
       gw:
 
-  certbot:
-    ports:
-      - "6000:80"
-    env_file:
-      - .env
-    volumes:
-      - ./nginx/:/etc/nginx/
-    build:
-      context: ./certbot
-      dockerfile: Dockerfile
-      args:
-        DOMAIN_EMAIL: ${DOMAIN_EMAIL}
-        DOMAIN_URL: ${DOMAIN_URL}
-    networks:
-      gw:
-
   postgres:
     image: postgres:latest
     container_name: postgres
