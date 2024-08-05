@@ -1,6 +1,6 @@
 services:
   nginx:
-    image: nginx:1.23.3
+    image: nginx:latest
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/cert.pem:/etc/cert.pem
@@ -20,8 +20,8 @@ services:
       context: ./certbot
       dockerfile: Dockerfile
       args:
-        DOMAIN_URL: ${DOMAIN_URL}
         DOMAIN_EMAIL: ${DOMAIN_EMAIL}
+        DOMAIN_URL: ${DOMAIN_URL}
 
 networks:
   gw:
