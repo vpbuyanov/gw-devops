@@ -44,6 +44,7 @@ services:
       - 8080
     volumes:
       - server-data:/var/lib/server/data
+      - './config.yaml:/config.yaml'
     depends_on:
       - postgres
     networks:
