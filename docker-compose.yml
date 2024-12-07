@@ -16,8 +16,8 @@ services:
     image: postgres:latest
     container_name: postgres
     restart: unless-stopped
-    expose:
-      - 5432
+    ports:
+      - "5432:5432"
     env_file:
       - .postgres.env
     volumes:
